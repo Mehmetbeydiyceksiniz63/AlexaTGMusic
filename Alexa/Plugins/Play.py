@@ -54,7 +54,7 @@ from Alexa.Utilities.func import mplay_stream, vplay_stream
 
 
 @app.on_message(
-    commandpro(["/p", "Play", "/play", "/play@{BOT_USERNAME}"]) & filters.group
+    commandpro(["/o", "oynat", "/oynat", "/oynat@{BOT_USERNAME}"]) & filters.group
 )
 @checker
 @logging
@@ -124,7 +124,7 @@ async def mplayaa(_, message: Message):
         )
     elif video:
         return await message.reply_text(
-            "ᴜsᴇ `/play` ᴏʀ `/vplay` ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴘʟᴀʏ ᴀᴜᴅɪᴏ ᴏʀ ᴠɪᴅᴇᴏ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ..."
+            "ᴜsᴇ `/oynat` ᴏʀ `/voynat` ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴘʟᴀʏ ᴀᴜᴅɪᴏ ᴏʀ ᴠɪᴅᴇᴏ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ..."
         )
     elif url:
         mystic = await message.reply_text("🔄 ᴘʀᴏᴄᴇssɪɴɢ ᴜʀʟ....")
@@ -170,7 +170,7 @@ async def mplayaa(_, message: Message):
 
 
 @app.on_message(
-    commandpro(["/v", "/vplay", "vplay", "/vplay@{BOT_USERNAME}"]) & filters.group
+    commandpro(["/v", "/vplay", "voynat", "/vplay@{BOT_USERNAME}"]) & filters.group
 )
 @checker
 @logging
